@@ -37,31 +37,31 @@ Protobuf este un format de serializare a datelor dezvoltat de Google, folosit pe
 
 Este utilizat în comunicație între microservicii și stocarea datelor.
 
-###**Componentele Sistemului**
+### **Componentele Sistemului**
 
-####Proiectul Broker:
+#### Proiectul Broker:
 
 Program.cs: Acesta este punctul de intrare al aplicației Broker. Acesta configurează și pornește serverul gRPC, stabilind adresa brokerului.
 
 Startup.cs: Această clasă definește serviciile și middleware-ul aplicației. Aici se adaugă serviciile gRPC și se configurează rutele pentru clienți.
 
-####Proiectul Receiver:
+#### Proiectul Receiver:
 
 Program.cs: Punctul de intrare pentru aplicația Receiver. Acesta inițializează serverul și gestionează subscrierea la broker.
 
 Startup.cs: Similar cu proiectul Broker, configurează serviciile gRPC și rutele pentru gestionarea cererilor.
 
-####Namespace-ul Common:
+#### Namespace-ul Common:
 
 EndpointsConstants.cs: Conține constantele pentru adresele brokerului și subscrierilor. Aceste adrese sunt utilizate în ambele aplicații pentru a stabili conexiuni corecte.
 
-###Serviciile:
+### Serviciile:
 
 MessageStorageService și ConnectionStorageService: Aceste servicii sunt responsabile pentru gestionarea mesajelor și a conexiunilor între clienți și broker. Ele sunt înregistrate ca singletoni pentru a asigura că aceeași instanță este utilizată în întreaga aplicație.
 
 SenderWorker: Un serviciu de fundal care gestionează trimiterea mesajelor către abonați.
 
-###Funcționarea Sistemului
+### Funcționarea Sistemului
 
 Configurarea Serverului:
 
