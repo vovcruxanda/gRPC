@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "6SaiDx3z78UHfgu3on6viJzLuQw3zXd5ZavfUKIxD7/mOHtQbZU6nKtvDQJuwcyeH2gYkjOLuTPXcYZDjPlNXA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\danax\\OneDrive\\Desktop\\gRPC\\Agent-de-mesagerie-RPC\\Common\\Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\danax\\.nuget\\packages\\google.protobuf\\3.21.7\\google.protobuf.3.21.7.nupkg.sha512",
+    "C:\\Users\\danax\\.nuget\\packages\\grpc\\2.46.5\\grpc.2.46.5.nupkg.sha512",
+    "C:\\Users\\danax\\.nuget\\packages\\grpc.core\\2.46.5\\grpc.core.2.46.5.nupkg.sha512",
+    "C:\\Users\\danax\\.nuget\\packages\\grpc.core.api\\2.46.5\\grpc.core.api.2.46.5.nupkg.sha512",
+    "C:\\Users\\danax\\.nuget\\packages\\grpc.tools\\2.49.1\\grpc.tools.2.49.1.nupkg.sha512",
+    "C:\\Users\\danax\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\danax\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\danax\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\danax\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\danax\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}

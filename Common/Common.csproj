@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <None Remove="Protos\notify.proto" />
+	  <None Remove="Protos\publish.proto" />
+	  <None Remove="Protos\subscriber.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.21.7" />
+    <PackageReference Include="Grpc" Version="2.46.5" />
+    <PackageReference Include="Grpc.Tools" Version="2.49.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+   	  <Protobuf Include="Protos\notify.proto" />
+	  <Protobuf Include="Protos\publish.proto" />
+	  <Protobuf Include="Protos\subscriber.proto" />
+  </ItemGroup>
+
+</Project>

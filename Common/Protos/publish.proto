@@ -1,0 +1,24 @@
+syntax = "proto3"; // Specifies that the file uses Protocol Buffers version 3 syntax.
+
+option csharp_namespace = "GrpcAgent"; // Sets the C# namespace for the generated code, organizing it under 'GrpcAgent'.
+
+package GrpcAgent; // Defines the package name for the service and messages, which helps in avoiding naming conflicts.
+
+service Publisher { // Defines a gRPC service named 'Publisher'.
+  
+  rpc PublishMessage (PublisherRequest) returns (PublisherReply); // Declares a remote procedure call (RPC) method named 'PublishMessage'.
+  // - This method takes a 'PublisherRequest' message as input and returns a 'PublisherReply' message as output.
+}
+
+message PublisherRequest { // Defines a message type for the request to the 'PublishMessage' method.
+  string topic = 1; // Declares a field named 'topic' of type string with a field number of 1.
+  // This field specifies the topic under which the message is published.
+  
+  string content = 2; // Declares a field named 'content' of type string with a field number of 2.
+  // This field contains the actual content of the message to be published.
+}
+
+message PublisherReply { // Defines a message type for the reply from the 'PublishMessage' method.
+  bool isSuccess = 1; // Declares a field named 'isSuccess' of type bool with a field number of 1.
+  // This field indicates whether the message was successfully published or not.
+}

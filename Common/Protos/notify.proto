@@ -1,0 +1,20 @@
+﻿syntax = "proto3"; // Specifies that we are using Protocol Buffers version 3 syntax.
+
+option csharp_namespace = "GrpcAgent"; // Sets the C# namespace for the generated code.
+
+package GrpcAgent; // Defines the package name for the service and messages.
+
+service Notifier { // Defines a gRPC service named 'Notifier'.
+  rpc Notify (NotifyRequest) returns (NotifyReply); // Declares a remote procedure call (RPC) method named 'Notify'.
+  // - It takes a 'NotifyRequest' message as input and returns a 'NotifyReply' message as output.
+}
+
+message NotifyRequest { // Defines a message type for the request to the 'Notify' method.
+  string content = 1; // Declares a field named 'content' of type string with a field number of 1.
+  // Field numbers are used in the binary encoding of the message.
+}
+
+message NotifyReply { // Defines a message type for the reply from the 'Notify' method.
+  bool isSuccess = 1; // Declares a field named 'isSuccess' of type bool with a field number of 1.
+  // This field indicates whether the notification was successfully processed.
+}

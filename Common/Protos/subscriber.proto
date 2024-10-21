@@ -1,0 +1,23 @@
+﻿syntax = "proto3"; // Specifies that the file uses Protocol Buffers version 3 syntax.
+
+option csharp_namespace = "GrpcAgent"; // Sets the C# namespace for the generated code, organizing it under 'GrpcAgent'.
+
+package GrpcAgent; // Defines the package name for the service and messages, which helps in avoiding naming conflicts.
+
+service Subscriber { // Defines a gRPC service named 'Subscriber'.
+  rpc Subscribe (SubscriberRequest) returns (SubscriberReply); // Declares a remote procedure call (RPC) method named 'Subscribe'.
+  // - This method takes a 'SubscriberRequest' message as input and returns a 'SubscriberReply' message as output.
+}
+
+message SubscriberRequest { // Defines a message type for the request to the 'Subscribe' method.
+  string topic = 1; // Declares a field named 'topic' of type string with a field number of 1.
+  // This field specifies the topic that the client wants to subscribe to.
+  
+  string address = 2; // Declares a field named 'address' of type string with a field number of 2.
+  // This field contains the address of the subscriber (client) requesting the subscription.
+}
+
+message SubscriberReply { // Defines a message type for the reply from the 'Subscribe' method.
+  bool isSuccess = 1; // Declares a field named 'isSuccess' of type bool with a field number of 1.
+  // This field indicates whether the subscription was successful or not.
+}
